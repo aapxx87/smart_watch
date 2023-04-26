@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #acbcc3;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../pngegg.png') center / cover;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+
+/* делаем точку в центер часов от которой будут отходить стрелки */
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: gray;
+  z-index: 111;
+}
+
+/* добавляем стрелку для часов */
+.hour {
+  position: absolute;
+}
+
+.hours {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.hours::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background-color: black;
+  border-radius: 6px;
+  z-index: 10;
+
+}
+
+
+/* добавляем стрелку для минут */
+
+.minute {
+  position: absolute;
+}
+
+.minutes {
+  width: 190px;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.minutes::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: rgb(107, 103, 103);
+  border-radius: 6px;
+  z-index: 11;
+
+}
+
+
+
+/* добавляем стрелку для секунд */
+
+.secund {
+  position: absolute;
+}
+
+.secunds {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+
+.secunds::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 130px;
+  background-color: rgb(222, 102, 102);
+  border-radius: 6px;
+  z-index: 11;
+
+}
